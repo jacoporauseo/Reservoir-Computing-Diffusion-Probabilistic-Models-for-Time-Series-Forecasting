@@ -60,7 +60,7 @@ class Diffusion(ABC):
 class DDPM:
     """The idea for the class is taken from KAIST Diffusion Model Course"""
     def __init__(self, scheduler : BaseScheduler):
-        self.scheduler = scheduler
+        self.scheduler = scheduler 
 
     def q_sample(self, x_0 : torch.Tensor, k: int, noise = None):
         r"""

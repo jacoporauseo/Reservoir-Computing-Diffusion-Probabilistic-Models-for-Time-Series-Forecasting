@@ -8,9 +8,11 @@ import torch
 
 class AR1(ABC):   
     @abstractmethod
-    def generate_trajectory(self, T: int):
+    def generate_trajectory(self, T: int) -> torch.Tensor:
         "Create a trajectory from the AR process"
         pass
+    
+    @abstractmethod
     def conditional_pdf(self, x: np.ndarray, c:float):
         """Conditional pdf given x_{t-1}"""
         pass
